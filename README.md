@@ -8,31 +8,28 @@ A lista de produtos está disponível no arquivo products.json, mas sinta-se liv
 
 As imagens estão disponíveis no arquivo assets.zip
 
-## Requisitos Funcionais
+## Executar a aplicação
+Para executar a aplicação, basta possuir o Docker e Docker Compose instalados na máquina.
+<pre>docker compose up
+</pre>
+Ou usar o comando abaixo para versões mais antigas do docker compose
+<pre>docker-compose up
+</pre>
 
-- O usuário deverá fazer login
-- O usuário poderá adicionar e remover produtos do carrinho.
-- O usuário poderá ordenar os produtos por preço, popularidade (score) e ordem alfabética. A filtragem deve ser realizada pela API.
-- Os valores exibidos no checkout (frete, subtotal e total) devem ser calculados dinamicamente conforme o usuário seleciona ou remove produtos.
-- A cada produto adicionado, deve-se somar R$ 10,00 ao frete.
-- Quando o valor dos produtos adicionados ao carrinho for igual ou superior a R$ 250,00, o frete é grátis.
-- O usuário pode realizar checkout de seu carrinho de compras. 
-- O usuário pode consultar os pedidos feitos.
+## Link para Aplicação React
+`http://localhost:3000`<br>
+[React-webapp](http://localhost:3000)
 
-## Requisitos Não Funcionais
 
-- Deverá ser documentado no [README.md](./README.md) como executar/compilar/empacotar o projeto e quais os endpoints solicitados nos requisitos acima. Para esse fim podem ser utilizadas ferramentas de containerização e automatização de builds.
-- Utilizar o banco de dados Postgres.
-- Para CRUD das entidades no banco de dados, utilizar preferencialmente migrations.
+## Link para Documentação com Swagger
+`http://localhost:5000/swagger-ui`<br>
+[Swagger-docs](http://localhost:5000/swagger-ui)
 
-## O que iremos avaliar
+## Front-end
+![](frontend-login.png)
+![](frontend-order.png)
+![](frontend-store.png)
 
-Levaremos em conta os seguintes critérios:
-
-- Cumprimento dos requisitos
-- Qualidade do projeto da API
-- Qualidade do layout e fluidez da UX
-- Organização do código e boas práticas
-- Domínio das linguagens, bibliotecas e ferramentas utilizadas
-- Organização dos commits
-- Escrita e cobertura de testes
+## Back-end
+![](backend-1.png)
+![](backend-1.png)

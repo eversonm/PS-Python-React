@@ -1,5 +1,8 @@
 # Rest API
 
+![](backend-1.png)
+![](backend-1.png)
+
 ## Requisitos do cliente
 Possuir uma máquina com ambiente python configurável e/ou docker, caso queira executar a aplicação em um container.
 
@@ -24,18 +27,23 @@ No meu setup foi utilizado o Docker Compose versão v2.15.1
 docker compose up
 </pre>
 
-### Iniciar a aplicação sem docker
-`Na pasta raiz`
+
+## Link para Documentação com Swagger
+`http://localhost:5000/swagger-ui`<br>
+[Swagger-docs](http://localhost:5000/swagger-ui)
+
+
+## Execução local sem usar Docker
+Para execução local, é necessário instalar os pacotes necessários:
 <pre>pip install -r requirements.txt
-gunicorn --bind 0.0.0.0:8080 'pspython:create_app()'
 </pre>
+Também é preciso configurar o banco de dados, usando o arquivo *connection.py* e informar as configurações do banco Postgres.
+
+### Iniciar o banco de dados
+<pre>flask --app pspython db migrate</pre>
 
 
-## Link para Swagger Docs
-`http://localhost:8000/swagger-ui`<br>
-[Swagger-docs](http://localhost:8000/swagger-ui)
-
-## Executar testes
-`Na pasta raiz, execute o comando:`
-<pre>pytest
+### Iniciar a aplicação
+`Na pasta raiz (backend)`
+<pre>gunicorn --bind 0.0.0.0:5000 'pspython:create_app()'
 </pre>

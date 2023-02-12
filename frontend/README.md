@@ -2,7 +2,9 @@
 *Aplicação em React para o desafio*
 
 
-![](front-end-react.gif)
+![](frontend-login.png)
+![](frontend-order.png)
+![](frontend-store.png)
 
 ## Modules
 [React](https://pt-br.reactjs.org/) <br>
