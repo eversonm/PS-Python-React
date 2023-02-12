@@ -34,7 +34,6 @@ class OrderCreate(MethodView):
     def post(self, order_data):
         date = datetime.utcnow()
         deliver = order_data["deliver"]
-        print(deliver)
         dict = {
             "id_user": order_data["id_user"],
             "date": date

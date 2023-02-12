@@ -46,7 +46,8 @@ class UserLogin(MethodView):
             refresh_token = create_refresh_token(identity=user.id)
 
             return {
-                "access_token": access_token,
+                "userId": user.id,
+                "token": access_token,
                 "refresh_token": refresh_token
             }
 
